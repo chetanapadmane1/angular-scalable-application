@@ -23,7 +23,7 @@
               "projects/ui-kit/src/assets"
             ],
             "styles": [
-              "projects/ui-kit/src/styles.css"
+              "projects/ui-kit/src/styles.scss"
             ],
             "scripts": []
           },
@@ -79,7 +79,7 @@
             "tsConfig": "projects/ui-kit/tsconfig.spec.json",
             "karmaConfig": "projects/ui-kit/karma.conf.js",
             "styles": [
-              "projects/ui-kit/src/styles.css"
+              "projects/ui-kit/src/styles.scss"
             ],
             "scripts": [],
             "assets": [
@@ -150,7 +150,7 @@
               "projects/ods/src/assets"
             ],
             "styles": [
-              "projects/ods/src/styles.css"
+              "projects/ods/src/styles.scss"
             ],
             "scripts": []
           },
@@ -206,7 +206,7 @@
             "tsConfig": "projects/ods/tsconfig.spec.json",
             "karmaConfig": "projects/ods/karma.conf.js",
             "styles": [
-              "projects/ods/src/styles.css"
+              "projects/ods/src/styles.scss"
             ],
             "scripts": [],
             "assets": [
@@ -258,5 +258,10 @@
       }
     }
   },
-  "defaultProject": "ui-kit"
+  "defaultProject": "ui-kit",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

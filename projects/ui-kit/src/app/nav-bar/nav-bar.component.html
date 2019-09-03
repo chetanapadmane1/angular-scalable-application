@@ -1,3 +1,5 @@
-<p>
-  nav-bar works!
-</p>
+<ul class="nav flex-column">
+  <li *ngFor="let menuLink of menu" class="nav-item ">
+    <a class="nav-link" [routerLink]='menuLink.url'>{{ menuLink.title }}</a>
+  </li>
+</ul>
