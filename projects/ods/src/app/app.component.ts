@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { menu } from './ods.stub';
+import { ods } from './ods.stub';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,6 @@ import { menu } from './ods.stub';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ods';
-  menuLinks = menu;
+  title = 'ODS';
+  menuLinks = ods.menu;
 }

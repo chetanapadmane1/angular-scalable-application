@@ -1,13 +1,11 @@
-@import "../../../../utilities/colors.scss";
-.side-menu {
-  background-color: $blue;
-  color: $white;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 250px;
-}
-.content {
-  left: 250px;
-  position: absolute;
+@import "colors.scss";
+.main-container {
+  .side-menu {
+    background-color: $blue-dark;
+    color: $white;
+    min-height: 100vh;
+    .title {
+      vertical-align: middle;
+    }
+  }
 }

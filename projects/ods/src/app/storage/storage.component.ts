@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Volume } from '../module/Volume';
-import { volumeHeading, volumeData } from '../ods.stub';
+import { ActivatedRoute } from '@angular/router';
+import { ods } from '../ods.stub';
 
 @Component({
   selector: 'app-storage',
@@ -8,16 +8,31 @@ import { volumeHeading, volumeData } from '../ods.stub';
   styleUrls: ['./storage.component.scss']
 })
 export class StorageComponent implements OnInit {
-  volumeList: Volume[];
-  volumeHeading: string[];
+  title: string;
+  volumeProperties: string[];
   rowSelectable: boolean;
+  storageIndex: number;
+  overview: string;
+  storage;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.volumeHeading = volumeHeading;
-    this.volumeList = volumeData;
+    this.overview = 'Overview';
+    this.title = 'Storage';
+    this.volumeProperties = ods.volumeHeading;
     this.rowSelectable = true;
+    this.route
+      .queryParams
+      .subscribe(params => {
+        this.storageIndex = params['index'] || 0;
+      });
+
+    this.getSelectedStorage();
   }
 
+
+  getSelectedStorage() {
+    this.storage = ods.storage.storageData[this.storageIndex];
+  }
 }

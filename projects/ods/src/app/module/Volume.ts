@@ -1,4 +1,4 @@
-export class Volume {
+export interface Volume {
     title: string;
     size: string;
 }

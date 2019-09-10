@@ -1,7 +1,21 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="side-menu">
-  <app-nav-bar [menu]="menuLinks"></app-nav-bar>
-</div>
-<div class="content">
-  <router-outlet></router-outlet>
+<div class="main-container row">
+  <div class="side-menu col-md-2 p-4">
+    <div class="menu-title m-2">
+      <span class="icons">
+        <img class="m-2" src="../assets/icons/icon-Menu.svg" />
+        <img class="m-2" src="../assets/icons/icon-storage-color.svg" />
+      </span>
+      <span class="title h4">
+        {{ title }}
+      </span>
+    </div>
+    <div class="mt-4">
+      <app-nav-bar [menu]="menuLinks" class="mt-3"></app-nav-bar>
+    </div>
+  </div>
+  <div class="col-md-10">
+    <div class="m-5">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>

@@ -1,2 +1,7 @@
-
-<app-grid [contents]='volumeList' [heading]='volumeHeading' [rowSelection]='rowSelectable'></app-grid>
+<div class="h3 mb-5">
+  {{ title }}
+</div>
+<div class="contents p-4">
+  <div class="h4 p-3">{{ overview }}</div>
+  <app-grid [contents]="storage.volume" [heading]="volumeProperties"></app-grid>
+</div>

@@ -81,6 +81,11 @@
             "styles": [
               "projects/ui-kit/src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "styles"
+              ]
+            },
             "scripts": [],
             "assets": [
               "projects/ui-kit/src/favicon.ico",
@@ -147,11 +152,16 @@
             "tsConfig": "projects/ods/tsconfig.app.json",
             "assets": [
               "projects/ods/src/favicon.ico",
-              "projects/ods/src/assets"
+              "projects/ods/src/assets",
             ],
             "styles": [
               "projects/ods/src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

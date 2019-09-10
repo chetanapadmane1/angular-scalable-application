@@ -1,4 +1,16 @@
-<p>
-  dashboard works!
-</p>
-<app-grid [contents]='storageList' [heading]='storageHeading'></app-grid>
+<div class="h3 mb-5">
+  {{ title }}
+</div>
+<div class="contents p-4">
+  <div class="p-4">
+    <div class="h4 float-left">{{ overview }}</div>
+    <button class="float-right btn btn-danger">{{ deleteStorage }}</button>
+  </div>
+  <app-grid
+    [contents]="storageList"
+    [heading]="storageProperties"
+    [visibleColumns]="visibleColumns"
+    [rowSelection]="rowSelection"
+    (getSelectedRowIndex)="displayStorageDetails($event)"
+  ></app-grid>
+</div>

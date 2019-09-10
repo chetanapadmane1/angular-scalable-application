@@ -1,7 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css';
-@import '../../../utilities/utilities.scss';
-@import '../../../utilities/colors.scss';
-a:hover{
-    color:$white;
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "utilities.scss";
+@import "colors.scss";
+body {
+  overflow-x: hidden;
+  a:hover {
+    color: $white;
+  }
 }
