@@ -1,0 +1,9 @@
+{
+    "title": {
+        "ods": "ODS",
+        "dashboard": "Tableau de bord",
+        "storage": "Espace de rangement"
+    },
+    "overview": "Vue d'ensemble",
+    "deleteStorage": "Supprimer le stockage"
+}

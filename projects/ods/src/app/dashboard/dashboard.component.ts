@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '../module/Storage';
 import { ods } from '../ods.stub';
 
@@ -9,22 +10,16 @@ import { ods } from '../ods.stub';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  title: string;
   storageList: Storage[];
   storageProperties: string[];
   visibleColumns: string[];
-  overview: string;
-  deleteStorage: string;
   rowDelete: boolean;
   rowSelection: boolean;
 
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, translate: TranslateService) { }
 
   ngOnInit() {
-    this.title = 'Dashboard';
-    this.overview = 'Overview';
-    this.deleteStorage = 'Delete Storage';
     this.storageList = ods.storage.storageData;
     this.storageProperties = ods.storage.storageHeading;
     this.visibleColumns = ods.storage.visibleColumns;

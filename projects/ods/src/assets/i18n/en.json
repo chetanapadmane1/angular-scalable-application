@@ -1,0 +1,9 @@
+{
+    "title":{
+        "ods": "ODS",
+        "dashboard": "Dashboard",
+        "storage": "Storage"
+    },
+    "overview": "Overview",
+    "deleteStorage": "Delete Storage"
+}

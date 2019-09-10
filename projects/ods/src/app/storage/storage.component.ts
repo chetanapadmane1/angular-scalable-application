@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { ods } from '../ods.stub';
 
 @Component({
@@ -15,7 +16,7 @@ export class StorageComponent implements OnInit {
   overview: string;
   storage;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, translate: TranslateService) { }
 
   ngOnInit() {
     this.overview = 'Overview';

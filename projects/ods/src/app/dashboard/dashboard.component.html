@@ -1,10 +1,12 @@
 <div class="h3 mb-5">
-  {{ title }}
+  {{ "title.dashboard" | translate }}
 </div>
 <div class="contents p-4">
   <div class="p-4">
-    <div class="h4 float-left">{{ overview }}</div>
-    <button class="float-right btn btn-danger">{{ deleteStorage }}</button>
+    <div class="h4 float-left">{{ "overview" | translate }}</div>
+    <button class="float-right btn btn-danger">
+      {{ "deleteStorage" | translate }}
+    </button>
   </div>
   <app-grid
     [contents]="storageList"

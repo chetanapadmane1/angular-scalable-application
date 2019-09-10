@@ -1,7 +1,7 @@
 <div class="h3 mb-5">
-  {{ title }}
+  {{ "title.storage" | translate }}
 </div>
 <div class="contents p-4">
-  <div class="h4 p-3">{{ overview }}</div>
+  <div class="h4 p-3">{{ "overview" | translate }}</div>
   <app-grid [contents]="storage.volume" [heading]="volumeProperties"></app-grid>
 </div>
